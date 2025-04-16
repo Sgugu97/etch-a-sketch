@@ -1,0 +1,26 @@
+.container{
+    display:flex;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    flex-wrap: wrap;
+    width: 700px;
+}
+
+.sizer{
+    display: flex;
+    justify-self: center;
+    width: 140px;
+    height: 25px;
+    margin-bottom: 100px;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.box{
+    width:70px;
+    height: 70px;
+    border: solid 2px;
+    margin: 2px;
+    border-radius:20px;
+}
