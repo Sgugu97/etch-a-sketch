@@ -20,15 +20,22 @@ for (let a=0;a<b; a++){
         let box = document.createElement("div");
         box.classList = "box";
         column.appendChild(box);
-
+        
+        let opa=0.2;
+        box.style.opacity=opa;
+        
         box.addEventListener("mouseover", () => {
-            function rgb(x, y ,z){
+            function rgb(x, y ,z , w){
                 return "rgb(" +x+ "," +y+ "," +z+ ")";
             }
             let x= Math.random()*225;
             let y= Math.random()*225;
             let z= Math.random()*225;
             box.style.backgroundColor = rgb(x, y, z);
+            
+            box.style.opacity=opa;
+            opa=opa +0.2;
+            
         });
     }
 }
@@ -51,14 +58,21 @@ sizer.addEventListener("click", () => {
                 let box = document.createElement("div");
                 box.classList = "box";
                 column.appendChild(box);
+
+                let opa=0.2;
+                box.style.opacity=opa;
+
                 box.addEventListener("mouseover", () => {
-                    function rgb(x, y ,z){
+                    function rgb(x, y ,z , w){
                         return "rgb(" +x+ "," +y+ "," +z+ ")";
                     }
                     let x= Math.random()*225;
                     let y= Math.random()*225;
                     let z= Math.random()*225;
                     box.style.backgroundColor = rgb(x, y, z);
+
+                    box.style.opacity=opa;
+                    opa=opa +0.2;
                 });
             }
         }  
