@@ -10,36 +10,41 @@ container.classList = "container";
 let b = 16;
 
 
+
 for (let a=0;a<b; a++){
-        for(let a=0; a<b; a++){
-            let box = document.createElement("div");
-            box.classList = "box";
-            container.appendChild(box);
-            box.addEventListener("mouseover", () => {
-                box.setAttribute("style", "background-color : blue;");
-            });
-        }
+    let column = document.createElement("div");
+    column.classList = "column";
+    container.appendChild(column);
+    for(let a=0; a<b; a++){
+        let box = document.createElement("div");
+        box.classList = "box";
+        column.appendChild(box);
+        box.addEventListener("mouseover", () => {
+            box.setAttribute("style", "background-color : blue;");
+        });
+    }
 }
 
 sizer.addEventListener("click", () => {
-    for (let i=0; i<256; i++){
-        const element = document.querySelector(".box");
-    container.removeChild(element);
+    for (let i=0; i<b; i++){
+        const element = document.querySelector(".column");
+        container.removeChild(element);
     };
 
     b=20;
 
     for (let a=0;a<b; a++){
+        let column = document.createElement("div");
+        column.classList = "column";
+        container.appendChild(column);
         for(let a=0; a<b; a++){
             let box = document.createElement("div");
             box.classList = "box";
-            container.appendChild(box);
+            column.appendChild(box);
             box.addEventListener("mouseover", () => {
                 box.setAttribute("style", "background-color : blue;");
             });
         }
-    }
-
-    
+    }   
 })
 
