@@ -15,6 +15,7 @@ for (let a=0;a<b; a++){
     let column = document.createElement("div");
     column.classList = "column";
     container.appendChild(column);
+    
     for(let a=0; a<b; a++){
         let box = document.createElement("div");
         box.classList = "box";
@@ -26,25 +27,30 @@ for (let a=0;a<b; a++){
 }
 
 sizer.addEventListener("click", () => {
-    for (let i=0; i<b; i++){
-        const element = document.querySelector(".column");
-        container.removeChild(element);
-    };
+    let newGrid = prompt("Please select new grid width.")
+    if (newGrid < 100){
+        for (let i=0; i<b; i++){
+            const element = document.querySelector(".column");
+            container.removeChild(element);
+        };
 
-    b=20;
+        b=newGrid;
 
-    for (let a=0;a<b; a++){
-        let column = document.createElement("div");
-        column.classList = "column";
-        container.appendChild(column);
-        for(let a=0; a<b; a++){
-            let box = document.createElement("div");
-            box.classList = "box";
-            column.appendChild(box);
-            box.addEventListener("mouseover", () => {
-                box.setAttribute("style", "background-color : blue;");
-            });
-        }
-    }   
+        for (let a=0;a<b; a++){
+            let column = document.createElement("div");
+            column.classList = "column";
+            container.appendChild(column);
+            for(let a=0; a<b; a++){
+                let box = document.createElement("div");
+                box.classList = "box";
+                column.appendChild(box);
+                box.addEventListener("mouseover", () => {
+                    box.setAttribute("style", "background-color : blue;");
+                });
+            }
+        }  
+    }else if(newGrid > 100){
+        alert("The width must be lower than 100.")
+    } 
 })
 
