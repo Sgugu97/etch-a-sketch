@@ -20,8 +20,15 @@ for (let a=0;a<b; a++){
         let box = document.createElement("div");
         box.classList = "box";
         column.appendChild(box);
+
         box.addEventListener("mouseover", () => {
-            box.setAttribute("style", "background-color : blue;");
+            function rgb(x, y ,z){
+                return "rgb(" +x+ "," +y+ "," +z+ ")";
+            }
+            let x= Math.random()*225;
+            let y= Math.random()*225;
+            let z= Math.random()*225;
+            box.style.backgroundColor = rgb(x, y, z);
         });
     }
 }
@@ -45,11 +52,17 @@ sizer.addEventListener("click", () => {
                 box.classList = "box";
                 column.appendChild(box);
                 box.addEventListener("mouseover", () => {
-                    box.setAttribute("style", "background-color : blue;");
+                    function rgb(x, y ,z){
+                        return "rgb(" +x+ "," +y+ "," +z+ ")";
+                    }
+                    let x= Math.random()*225;
+                    let y= Math.random()*225;
+                    let z= Math.random()*225;
+                    box.style.backgroundColor = rgb(x, y, z);
                 });
             }
         }  
-    }else if(newGrid > 100){
+    }else if(newGrid > 99){
         alert("The width must be lower than 100.")
     } 
 })
