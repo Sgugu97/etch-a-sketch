@@ -21,7 +21,7 @@ for (let a=0;a<b; a++){
         box.classList = "box";
         column.appendChild(box);
         
-        let opa=0.2;
+        let opa=0.1;
         box.style.opacity=opa;
         
         box.addEventListener("mouseover", () => {
@@ -34,7 +34,7 @@ for (let a=0;a<b; a++){
             box.style.backgroundColor = rgb(x, y, z);
             
             box.style.opacity=opa;
-            opa=opa +0.2;
+            opa=opa +0.1;
             
         });
     }
@@ -59,7 +59,7 @@ sizer.addEventListener("click", () => {
                 box.classList = "box";
                 column.appendChild(box);
 
-                let opa=0.2;
+                let opa=0.1;
                 box.style.opacity=opa;
 
                 box.addEventListener("mouseover", () => {
@@ -72,7 +72,7 @@ sizer.addEventListener("click", () => {
                     box.style.backgroundColor = rgb(x, y, z);
 
                     box.style.opacity=opa;
-                    opa=opa +0.2;
+                    opa=opa +0.1;
                 });
             }
         }  
