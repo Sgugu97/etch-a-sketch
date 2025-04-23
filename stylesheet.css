@@ -2,7 +2,8 @@
     display:flex;
     justify-self: center;
     border: solid 1px;
-    box-sizing: border-box;
+    height: 500px;
+    width: 500px;
 
 }
 
@@ -14,7 +15,15 @@
     font-size: 18px;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-items: stretch;
+}
+
 .box{
-    height: 10px;
-    width: 10px;
+    display: flex;
+    flex: 1;
+    align-self: stretch;
 }
